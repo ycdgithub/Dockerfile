@@ -1,0 +1,12 @@
+{
+    "name": "Ubuntu Docker for OS Experiments",
+    "dockerFile":"Dockerfile",
+    "image": "ubuntu",
+    "extensions": ["ms-python.python"],
+    "settings": {"terminal.integrated.shell.linux":"/bin/bash"},
+    "forwardPorts": [],
+    "postCreateCommand": "pip install --no-cache-dir -r requirements.txt && echo 'Development environment setup complete!'"
+    ,
+    "remoteUser": "vscode"
+  }
+  
