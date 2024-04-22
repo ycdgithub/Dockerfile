@@ -1,12 +1,20 @@
 {
+    // 定义开发环境的名称
     "name": "Ubuntu Docker for OS Experiments",
+    // 指定Dockerfile的路径，该文件用于构建Docker镜像
     "dockerFile":"Dockerfile",
+    // 基础Docker镜像的名称，虽然此处指定了"ubuntu"，但实际上会使用Dockerfile中定义的基础镜像 
     "image": "ubuntu",
+    // 需要安装的VS Code扩展列表，此处安装了Python扩展  
     "extensions": ["ms-python.python"],
+    // VS Code的设置，此处指定了Linux下的集成终端使用bash shell
     "settings": {"terminal.integrated.shell.linux":"/bin/bash"},
+    // 需要转发到Docker容器的端口列表，此处为空，表示不转发任何端口 
     "forwardPorts": [],
+    // 在Docker容器创建后执行的命令，此处用于安装Python依赖并输出一条消息
     "postCreateCommand": "pip install --no-cache-dir -r requirements.txt && echo 'Development environment setup complete!'"
     ,
+    // 在容器中使用的用户名，VS Code将以此用户身份运行命令和打开文件
     "remoteUser": "vscode"
   }
   
