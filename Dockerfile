@@ -44,4 +44,3 @@ RUN chmod +x /usr/local/bin/post-create.sh && \
 # 设置环境变量（可选，根据需要添加）
 ENV VARIABLE_NAME=value
 
-# 后续的Dockerfile指令...
